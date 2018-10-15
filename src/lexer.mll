@@ -8,7 +8,8 @@ rule token = parse
   | [' ' '\t' 'n'] { token lexbuf }
   | "read"  { TRead }
   | "let"   { TLet }
-  | "define" { TDefine }
+  | "in"    { TIn }
+  | "(define" { TDefine }
   | "Int"   { TDatatype Rprogram.TypeInt }
   | "Bool"  { TDatatype Rprogram.TypeBool }
   | "Void"  { TDatatype Rprogram.TypeVoid }
